@@ -3,25 +3,37 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --navbar-bg: #FFFFFF;
+  --border-divider-line: #FF758D;
+  --base-text-rgb: #4B5258;
+  --bg-main-blue: #EEEEEE;
+
+  --primary-fill: #021124;
+  --icon-gray-fill: #667085;
+
+  --pink-accent-border: #FF758D;
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.dark {
+  --navbar-bg: #042858;
+  --border-divider-line: #FFFFFF;
+  --base-text-rgb: #FFFFFF;
+  --bg-main-blue: #021124;
+
+  --primary-fill: #FFFFFF;
+  --icon-gray-fill: #FFFFFF;
+
+  --pink-accent-border: #FFFFFF;
+}
+
+@layer utilities {
+  .navbar-bg {
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, transparent 98%, var(--pink-accent-border) 98%, var(--pink-accent-border) 100%);
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  overflow: hidden;
 }
