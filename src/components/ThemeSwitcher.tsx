@@ -1,11 +1,9 @@
 "use client";
 import { useThemeProvider } from "@/lib/theme-provider";
-import Image from "next/image";
-import LightBulbDark from "@/assets/svgs/lightbulb-dark.svg";
-import LightBulbLight from "@/assets/svgs/lightbulb.svg";
+import SVGLightBulb from "@/app/(assets)/LightBulb";
 
 export const ThemeSwitcherElement = () => {
-  const { updateTheme, theme } = useThemeProvider();
+  const { updateTheme } = useThemeProvider();
 
   return (
     <div className="w-10 h-10 top-1/2 right-6 fixed">
@@ -14,10 +12,7 @@ export const ThemeSwitcherElement = () => {
           className="rounded-lg h-10 w-10 bg-blue-deep dark:bg-white flex items-center justify-center"
           onClick={() => updateTheme?.()}
         >
-          <Image
-            src={theme === "light" ? LightBulbDark : LightBulbLight}
-            alt="Lightbulb"
-          />
+          <SVGLightBulb />
         </button>
       </div>
     </div>

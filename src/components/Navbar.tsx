@@ -1,22 +1,12 @@
-"use client";
-import Image from "next/image";
 import Link from "next/link";
-import LogoDark from "@/assets/images/logo.png";
-import { useThemeProvider } from "@/lib/theme-provider";
-import LogoLight from "@/assets/images/logo-white.png";
+import SVGLogo from "@/app/(assets)/LogoIcon";
 
 export const NavbarElement = () => {
-  const { theme } = useThemeProvider();
   return (
     <div className="w-full px-12 bg-others-navbar">
       <div className="flex w-full items-center justify-between divider-bottom py-4 navbar-bg">
         <div>
-          <Image
-            src={theme === "dark" ? LogoLight : LogoDark}
-            alt="User logo"
-            width={20}
-            height={20}
-          />
+          <SVGLogo />
         </div>
 
         <nav>

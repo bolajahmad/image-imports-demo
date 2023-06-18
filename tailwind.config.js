@@ -18,6 +18,7 @@ module.exports = {
         others: {
           navbar: "var(--navbar-bg)",
           base: "var(--base-text-rgb)",
+          fill: "var(--primary-fill)",
         },
       },
       backgroundImage: {
