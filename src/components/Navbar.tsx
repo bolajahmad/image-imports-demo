@@ -1,4 +1,3 @@
-import Link from "next/link";
 import SVGLogo from "@/app/(assets)/LogoIcon";
 
 export const NavbarElement = () => {
@@ -12,19 +11,13 @@ export const NavbarElement = () => {
         <nav>
           <ul className="flex items-center gap-4 justify-end">
             <li key="about-href">
-              <Link href="/about">
-                <span>About</span>
-              </Link>
+              <span>Mean</span>
             </li>
             <li key="projects-href">
-              <Link href="/projects">
-                <span>Projects</span>
-              </Link>
+              <span>Median</span>
             </li>
             <li className="blogs-href">
-              <Link href="/blogs">
-                <span>Blog</span>
-              </Link>
+              <span>Mode</span>
             </li>
           </ul>
         </nav>
